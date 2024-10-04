@@ -11,7 +11,7 @@ namespace Api.Application.Interfaces.Repositories
     {
         Task AddAsync(T entity);
 
-        Task AddRnageAsync(IList<Task> entities);
+        Task AddRnageAsync(IList<T> entities);
 
         Task<T> UpdateAsync(T entity);
         Task HardDeleteAsync(T entity);

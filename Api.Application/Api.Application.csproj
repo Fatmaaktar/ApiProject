@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Api.Domain\Api.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Products\Commands\" />
-  </ItemGroup>
-
 </Project>

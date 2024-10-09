@@ -15,6 +15,7 @@ namespace Api.Application.Interfaces.Repositories
 
         Task<T> UpdateAsync(T entity);
         Task HardDeleteAsync(T entity);
+        Task HardDeleteRangeAsync(IList<T> entity);
 
 
     }

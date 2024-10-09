@@ -1,4 +1,7 @@
-﻿using Api.Application.Features.Products.Queries.GetAllProducts;
+﻿using Api.Application.Features.Products.Commands.CreateProduct;
+using Api.Application.Features.Products.Commands.DeleteProduct;
+using Api.Application.Features.Products.Commands.UpdateProduct;
+using Api.Application.Features.Products.Queries.GetAllProducts;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,6 +26,27 @@ namespace ApiProject.Api.Controllers
             var response = await mediator.Send(new GetAllProductsQueryRequest());
 
             return Ok(response);
+        }
+        [HttpGet]
+
+        public async Task<IActionResult> CreateProduct(CreateProductCommandRequest request)
+        {
+            await mediator.Send(request);
+            return Ok();
+        }
+        [HttpGet]
+
+        public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest request)
+        {
+            await mediator.Send(request);
+            return Ok();
+        }
+        [HttpGet]
+
+        public async Task<IActionResult> DeleteProduct(DeleteProductCommandRequest request)
+        {
+            await mediator.Send(request);
+            return Ok();
         }
     }
 }

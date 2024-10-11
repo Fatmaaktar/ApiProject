@@ -1,6 +1,7 @@
 using Api.Persistence;
 using Api.Application;
 using ApiProject.Mapper;
+using Api.Application.Exceptions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +33,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.ConfigureExceptionHandlingMidleware();
 app.UseAuthorization();
 
 app.MapControllers();

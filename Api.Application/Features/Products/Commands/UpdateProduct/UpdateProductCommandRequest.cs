@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Api.Application.Features.Products.Commands.UpdateProduct
 {
-    public class UpdateProductCommandRequest: IRequest
+    public class UpdateProductCommandRequest: IRequest<Unit>
     {
         public int Id { get; set; }
         public string Title { get; set; }

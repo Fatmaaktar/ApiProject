@@ -13,6 +13,6 @@ namespace Api.Application.Interfaces.Tokens
     {
         Task<JwtSecurityToken> CreateToken(User user, IList<string> rules);
         string GenerateFreshToken();
-        ClaimsPrincipal? GetPrincipalFromExpiredToken();
+        ClaimsPrincipal? GetPrincipalFromExpiredToken(string? token);
     }
 }

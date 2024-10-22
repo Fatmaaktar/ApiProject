@@ -14,9 +14,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.8.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Api.Infrastructure\Api.Infrastructure.csproj" />
     <ProjectReference Include="..\Api.Persistence\Api.Persistence.csproj" />
     <ProjectReference Include="..\ApiProject.Mapper\ApiProject.Mapper.csproj" />
   </ItemGroup>

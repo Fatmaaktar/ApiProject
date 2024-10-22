@@ -2,6 +2,7 @@ using Api.Persistence;
 using Api.Application;
 using ApiProject.Mapper;
 using Api.Application.Exceptions;
+using Api.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,7 @@ builder.Configuration.SetBasePath(emv.ContentRootPath)
     .AddJsonFile($"appsettings.{emv.EnvironmentName}.json", optional:false);
 
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
 

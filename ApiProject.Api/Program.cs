@@ -15,6 +15,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 var emv = builder.Environment;
 builder.Configuration.SetBasePath(emv.ContentRootPath)
     .AddJsonFile("appsettings.json", optional: false)

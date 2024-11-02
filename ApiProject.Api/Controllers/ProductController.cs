@@ -3,7 +3,6 @@ using Api.Application.Features.Products.Commands.DeleteProduct;
 using Api.Application.Features.Products.Commands.UpdateProduct;
 using Api.Application.Features.Products.Queries.GetAllProducts;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiProject.Api.Controllers

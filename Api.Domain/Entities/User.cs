@@ -12,5 +12,6 @@ namespace Api.Domain.Entities
         public string FullName { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpairToken { get; set; }
+        public DateTime? RefreshTokenExpairTime { get; set; }
     }
 }

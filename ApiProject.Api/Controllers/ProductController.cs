@@ -1,4 +1,6 @@
-﻿using Api.Application.Features.Products.Commands.CreateProduct;
+﻿using Api.Application.Features.Brands.Commands.CreateBrand;
+using Api.Application.Features.Brands.Queries.GetAllBrands;
+using Api.Application.Features.Products.Commands.CreateProduct;
 using Api.Application.Features.Products.Commands.DeleteProduct;
 using Api.Application.Features.Products.Commands.UpdateProduct;
 using Api.Application.Features.Products.Queries.GetAllProducts;
@@ -26,26 +28,40 @@ namespace ApiProject.Api.Controllers
 
             return Ok(response);
         }
-        [HttpGet]
+        [HttpPost]
 
         public async Task<IActionResult> CreateProduct(CreateProductCommandRequest request)
         {
             await mediator.Send(request);
             return Ok();
         }
-        [HttpGet]
+        [HttpPost]
 
         public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest request)
         {
             await mediator.Send(request);
             return Ok();
         }
-        [HttpGet]
+        [HttpPost]
 
         public async Task<IActionResult> DeleteProduct(DeleteProductCommandRequest request)
         {
             await mediator.Send(request);
             return Ok();
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> CreateBrand(CreateBrandCommandRequest request)
+        {
+            await mediator.Send(request);
+            return Ok();
+        }
+        [HttpPost]
+        public async Task<IActionResult> GetAllBrands()
+        {
+            var response = await mediator.Send(new GetAllBrandsQueryRequest());
+
+            return Ok(response);
         }
     }
 }

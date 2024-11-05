@@ -1,6 +1,6 @@
 # 🚀 ApiProject
 
-![API Project](https://img.shields.io/badge/.NET%20Core-6.0-blue)
+![API Project](https://img.shields.io/badge/.NET%20Core-8.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ApiProject is a RESTful API application built with .NET Core, implementing modern software development practices. It includes essential functionalities such as user authentication, data management, and performance optimization.
